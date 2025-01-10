@@ -1,4 +1,4 @@
-import fluid, { extract } from 'fluid-tailwind'
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
 import type { Config } from "tailwindcss";
 
 export default {
@@ -12,10 +12,21 @@ export default {
   extract
   },
   theme: {
+    screens,
+    fontSize,
     extend: {
       fontFamily: {
         sans: ['var(--font-bowlby-sc)'],
         mono: ['var(--font-dm-mono)'],
+      },
+      colors: {
+        "brand-blue": "#4876ff",
+        "brand-lime": "#d9f154",
+        "brand-navy": "#2e3192",
+        "brand-orange": "#ff7347",
+        "brand-pink": "#f7d0e9",
+        "brand-purple": "#692e54",
+        "brand-gray": "#fffdf9",
       },
     },
   },
