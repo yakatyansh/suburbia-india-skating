@@ -2,10 +2,11 @@ import { Bounded } from "@/components/Bounded";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Heading } from "@/components/Heading";
 import { Content } from "@prismicio/client";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText, PrismicText, SliceComponentProps } from "@prismicio/react";
 import clsx from "clsx";
 import { JSX } from "react";
+import { ParallaxImage } from "./ParallaxImage";
 
 /**
  * Props for `TextAndImage`.
@@ -46,8 +47,7 @@ const TextAndImage = ({ slice }: TextAndImageProps): JSX.Element => {
           </ButtonLink>
         </div>
           
-        {/* <PrismicNextImage field={slice.primary.background_image} /> */}
-        <PrismicNextImage field={slice.primary.foreground_image} />
+        <ParallaxImage foregroundImage={slice.primary.foreground_image} backgroundImage={slice.primary.background_image} />
 
         </div>
 

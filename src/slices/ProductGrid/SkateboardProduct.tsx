@@ -14,7 +14,6 @@ async function getDominantColor(url:string){
 
     const res = await fetch(paletteURL)
     const json = await res.json()
-    console.log(json)
 
     return (
         json.dominant_colors.vibrant?.hex || json.dominant_colors.
@@ -49,7 +48,7 @@ export async function SkateboardProduct({ id }: Props) {
         </div>
         <div className="-mb-1 overflow-hidden py-4">
             <Scribble className="absolute inset-0 h-full w-full" color={dominantColor}/>
-        <PrismicNextImage alt="" field={product.data.image} width={150} className="mx-auto w-[58%] origin-top transform-gpu transition-transform duration-500 ease-in-out 
+        <PrismicNextImage alt='' field={product.data.image} width={150} className="mx-auto w-[58%] origin-top transform-gpu transition-transform duration-500 ease-in-out 
         group-hover:scale-150"/>
         </div>
         <HorizontalLine className={HORIZONTAL_LINE_CLASSES}/>
